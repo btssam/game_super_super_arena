@@ -1,0 +1,62 @@
+[gd_resource type="TileSet" format=3 uid="uid://dx3phfn03c1au"]
+
+[ext_resource type="Texture2D" uid="uid://4jvgryk07jsh" path="res://Fighter/Raw Assets/Streets of Fight files/Assets/Stage Layers/tileset.png" id="1_ekl6y"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj620"]
+texture = ExtResource("1_ekl6y")
+11:14/size_in_atlas = Vector2i(7, 6)
+11:14/0 = 0
+11:14/0/texture_origin = Vector2i(-48, -40)
+19:14/size_in_atlas = Vector2i(7, 6)
+19:14/0 = 0
+19:14/0/texture_origin = Vector2i(-48, -40)
+27:14/size_in_atlas = Vector2i(6, 6)
+27:14/0 = 0
+27:14/0/texture_origin = Vector2i(-40, -40)
+26:8/size_in_atlas = Vector2i(2, 5)
+26:8/0 = 0
+26:8/0/texture_origin = Vector2i(-8, -32)
+23:7/size_in_atlas = Vector2i(2, 6)
+23:7/0 = 0
+23:7/0/texture_origin = Vector2i(-8, -40)
+20:7/size_in_atlas = Vector2i(2, 6)
+20:7/0 = 0
+20:7/0/texture_origin = Vector2i(-8, -40)
+16:7/size_in_atlas = Vector2i(3, 6)
+16:7/0 = 0
+16:7/0/texture_origin = Vector2i(-16, -40)
+12:7/size_in_atlas = Vector2i(3, 6)
+12:7/0 = 0
+12:7/0/texture_origin = Vector2i(-16, -40)
+8:7/size_in_atlas = Vector2i(3, 6)
+8:7/0 = 0
+8:7/0/texture_origin = Vector2i(-16, -40)
+4:7/size_in_atlas = Vector2i(3, 6)
+4:7/0 = 0
+4:7/0/texture_origin = Vector2i(-16, -40)
+0:7/size_in_atlas = Vector2i(3, 6)
+0:7/0 = 0
+0:7/0/texture_origin = Vector2i(-16, -40)
+0:0/size_in_atlas = Vector2i(14, 6)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(-104, -40)
+15:0/size_in_atlas = Vector2i(2, 6)
+15:0/0 = 0
+15:0/0/texture_origin = Vector2i(-8, -40)
+18:0/size_in_atlas = Vector2i(14, 6)
+18:0/0 = 0
+18:0/0/texture_origin = Vector2i(-104, -40)
+3:14/size_in_atlas = Vector2i(7, 9)
+3:14/0 = 0
+3:14/0/texture_origin = Vector2i(-48, -64)
+0:14/size_in_atlas = Vector2i(2, 9)
+0:14/0 = 0
+0:14/0/texture_origin = Vector2i(-8, -64)
+29:7/size_in_atlas = Vector2i(2, 6)
+29:7/next_alternative_id = 4
+29:7/0 = 0
+29:7/0/texture_origin = Vector2i(-8, -40)
+29:7/3 = 3
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_vj620")
