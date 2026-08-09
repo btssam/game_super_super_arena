@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqm0t6db6c2h2"
-path="res://.godot/imported/icon.svg-84f5038d67719b27c01b08e569fc15e5.ctex"
+uid="uid://i4scnd50w6lv"
+path="res://.godot/imported/jump_kick2.png-f353a9ba9aa657bf45154413f0b0a999.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Misc/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-84f5038d67719b27c01b08e569fc15e5.ctex"]
+source_file="res://Fighter/Raw Assets/Streets of Fight files/Assets/Sprites/Brawler-Girl/Jump_kick/jump_kick2.png"
+dest_files=["res://.godot/imported/jump_kick2.png-f353a9ba9aa657bf45154413f0b0a999.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

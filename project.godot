@@ -11,13 +11,23 @@ config_version=5
 [application]
 
 config/name="game_super_super_arena"
+run/main_scene="uid://ynft28wfgu5y"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://Misc/icon.svg"
+config/icon="res://Shared/Misc/icon.svg"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://Fighter/": "red",
+"res://Shared/": "gray"
+}
 
 [physics]
 
