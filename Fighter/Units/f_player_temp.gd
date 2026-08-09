@@ -18,11 +18,13 @@ func _process(_delta):
 	%CharacterBody2D.velocity.x = horizontal_movement_axis * movement_speed
 	if %CharacterBody2D.velocity.x != 0.0:
 		%AnimatedSprite2D.play("move")
-		%AnimatedSprite2D.speed_scale = abs(horizontal_movement_axis)
+		#%AnimatedSprite2D.speed_scale = abs(horizontal_movement_axis)
 		%AnimatedSprite2D.flip_h = horizontal_movement_axis < 0
+	elif %CharacterBody2D.velocity.y != 0.0:
+		%AnimatedSprite2D.play("move")
 	else:
 		%AnimatedSprite2D.play("default")
-		%AnimatedSprite2D.speed_scale = 1.0
+		#%AnimatedSprite2D.speed_scale = 1.0
 	%CharacterBody2D.velocity.y = vertical_movement_axis * movement_speed
 	%CharacterBody2D.move_and_slide()
 	

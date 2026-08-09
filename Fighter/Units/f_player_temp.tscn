@@ -129,11 +129,18 @@ unique_name_in_owner = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=455394512]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_km8ha")
-animation = &"move"
 autoplay = "default"
-frame_progress = 0.18009458
+frame = 2
+frame_progress = 0.3259967
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=65488692]
 visible = false
 position = Vector2(-2.5, 0)
 shape = SubResource("CapsuleShape2D_km8ha")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=99178811]
+limit_top = -360
+limit_bottom = 360
+drag_horizontal_enabled = true
+drag_right_margin = 0.4
+drag_bottom_margin = 0.4

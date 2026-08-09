@@ -11,6 +11,7 @@
 [node name="Parallax2D" type="Parallax2D" parent="F_Background" unique_id=236392929]
 
 [node name="Background" type="Sprite2D" parent="F_Background/Parallax2D" unique_id=653741430]
+texture_repeat = 2
 position = Vector2(384, -247.00002)
 scale = Vector2(3, 3)
 texture = ExtResource("1_uxsjo")
@@ -22,5 +23,4 @@ tile_set = ExtResource("2_5jdcr")
 
 [node name="F_Player_Temp" parent="." unique_id=803531380 instance=ExtResource("2_2lpwm")]
 position = Vector2(0, 185)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1286064679]
+scale = Vector2(3, 3)
