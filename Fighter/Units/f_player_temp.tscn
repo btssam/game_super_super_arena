@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bw86k63hldtd2"]
+
+[ext_resource type="Script" uid="uid://d3doxtrcj3lcx" path="res://Fighter/Units/f_player_temp.gd" id="1_7p02c"]
+[ext_resource type="Texture2D" uid="uid://cstppwg4cuv1g" path="res://Fighter/Raw Assets/Streets of Fight files/Assets/Spritesheets/Brawler Girl/idle.png" id="1_xi4qo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc208"]
+atlas = ExtResource("1_xi4qo")
+region = Rect2(32, 17, 28, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lpwm"]
+atlas = ExtResource("1_xi4qo")
+region = Rect2(128, 17, 28, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jdcr"]
+atlas = ExtResource("1_xi4qo")
+region = Rect2(224, 17, 28, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj620"]
+atlas = ExtResource("1_xi4qo")
+region = Rect2(320, 17, 28, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_km8ha"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc208")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lpwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jdcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj620")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_km8ha"]
+radius = 11.5
+height = 50.0
+
+[node name="F_Player_Temp" type="Node2D" unique_id=803531380]
+scale = Vector2(4, 4)
+script = ExtResource("1_7p02c")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1190234444]
+unique_name_in_owner = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=455394512]
+sprite_frames = SubResource("SpriteFrames_km8ha")
+autoplay = "default"
+frame_progress = 0.8829018
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=65488692]
+position = Vector2(-2.5, 0)
+shape = SubResource("CapsuleShape2D_km8ha")
