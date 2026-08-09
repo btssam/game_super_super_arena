@@ -1,2 +1,2 @@
-# game_super_super_arena
+# Super Super Arena
 complete rewrite of Arena
