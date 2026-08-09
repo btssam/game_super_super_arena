@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3doxtrcj3lcx" path="res://Fighter/Units/f_player_temp.gd" id="1_7p02c"]
 [ext_resource type="Texture2D" uid="uid://cstppwg4cuv1g" path="res://Fighter/Raw Assets/Streets of Fight files/Assets/Spritesheets/Brawler Girl/idle.png" id="1_xi4qo"]
+[ext_resource type="Texture2D" uid="uid://c8qdw5vs3f76a" path="res://Fighter/Raw Assets/Streets of Fight files/Assets/Spritesheets/Brawler Girl/walk.png" id="3_j561m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kc208"]
 atlas = ExtResource("1_xi4qo")
@@ -18,6 +19,46 @@ region = Rect2(224, 17, 28, 46)
 [sub_resource type="AtlasTexture" id="AtlasTexture_vj620"]
 atlas = ExtResource("1_xi4qo")
 region = Rect2(320, 17, 28, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqrto"]
+atlas = ExtResource("3_j561m")
+region = Rect2(34, 16, 28, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mot7"]
+atlas = ExtResource("3_j561m")
+region = Rect2(130, 16, 28, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1k7a"]
+atlas = ExtResource("3_j561m")
+region = Rect2(226, 16, 28, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdr87"]
+atlas = ExtResource("3_j561m")
+region = Rect2(322, 16, 28, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y67wx"]
+atlas = ExtResource("3_j561m")
+region = Rect2(418, 16, 28, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c4v2"]
+atlas = ExtResource("3_j561m")
+region = Rect2(514, 16, 28, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwkov"]
+atlas = ExtResource("3_j561m")
+region = Rect2(610, 16, 28, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is2gc"]
+atlas = ExtResource("3_j561m")
+region = Rect2(706, 16, 28, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gd2an"]
+atlas = ExtResource("3_j561m")
+region = Rect2(802, 16, 28, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlqj0"]
+atlas = ExtResource("3_j561m")
+region = Rect2(898, 16, 28, 47)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_km8ha"]
 animations = [{
@@ -37,6 +78,41 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqrto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mot7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1k7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdr87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y67wx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8c4v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwkov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is2gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gd2an")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlqj0")
+}],
+"loop": 1,
+"name": &"move",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_km8ha"]
@@ -51,10 +127,13 @@ script = ExtResource("1_7p02c")
 unique_name_in_owner = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=455394512]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_km8ha")
+animation = &"move"
 autoplay = "default"
-frame_progress = 0.8829018
+frame_progress = 0.18009458
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=65488692]
+visible = false
 position = Vector2(-2.5, 0)
 shape = SubResource("CapsuleShape2D_km8ha")

@@ -10,6 +10,7 @@
 [node name="Parallax2D" type="Parallax2D" parent="F_Background" unique_id=236392929]
 
 [node name="Background" type="Sprite2D" parent="F_Background/Parallax2D" unique_id=653741430]
+scale = Vector2(9, 9)
 texture = ExtResource("1_uxsjo")
 
 [node name="F_Player_Temp" parent="." unique_id=803531380 instance=ExtResource("2_2lpwm")]
