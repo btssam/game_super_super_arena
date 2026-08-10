@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://dx3phfn03c1au"]
 
-[ext_resource type="Texture2D" uid="uid://4jvgryk07jsh" path="res://Fighter/Raw Assets/Streets of Fight files/Assets/Stage Layers/tileset.png" id="1_ekl6y"]
+[ext_resource type="Texture2D" uid="uid://4jvgryk07jsh" path="res://Fighter/Raw Assets/Streets of Fight files/Stage Layers/tileset.png" id="1_ekl6y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj620"]
 texture = ExtResource("1_ekl6y")

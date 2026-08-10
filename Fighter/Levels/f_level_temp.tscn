@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ynft28wfgu5y"]
 
-[ext_resource type="Texture2D" uid="uid://c3xc1jgicdjmg" path="res://Fighter/Raw Assets/Streets of Fight files/Assets/Stage Layers/back.png" id="1_uxsjo"]
+[ext_resource type="Texture2D" uid="uid://c3xc1jgicdjmg" path="res://Fighter/Raw Assets/Streets of Fight files/Stage Layers/back.png" id="1_uxsjo"]
 [ext_resource type="PackedScene" uid="uid://bw86k63hldtd2" path="res://Fighter/Units/f_player_temp.tscn" id="2_2lpwm"]
 [ext_resource type="TileSet" uid="uid://dx3phfn03c1au" path="res://Fighter/Levels/stree_tile_set.tres" id="2_5jdcr"]
 

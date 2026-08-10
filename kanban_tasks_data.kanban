@@ -1,0 +1,83 @@
+{
+	"categories": [
+		{
+			"uuid": "1c0e70bf-55c7-4b16-9e20-f7baed71a8f1",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "a6d7126c-335b-43d2-8ad4-6aeb34bc6575",
+			"title": "Todo",
+			"tasks": [
+				"21afe28b-153c-40c2-a75a-4007afe89f79",
+				"a9622ff1-9dd3-47de-a7f0-29576811634e",
+				"d44f7961-e86a-40f2-a372-aedc443d063a",
+				"b0615370-cbf5-445e-a7e4-5a9d2d8035c7"
+			]
+		},
+		{
+			"uuid": "51b0b0aa-2f70-4ba5-8518-81ca75711465",
+			"title": "Doing",
+			"tasks": [
+				"da039b3c-0b64-4a78-ab73-fa58e528d7eb"
+			]
+		},
+		{
+			"uuid": "6eed04f7-0ae8-4abc-9178-f8cc965f161a",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "21afe28b-153c-40c2-a75a-4007afe89f79",
+			"title": "Main menu",
+			"description": "",
+			"category": "1c0e70bf-55c7-4b16-9e20-f7baed71a8f1",
+			"steps": []
+		},
+		{
+			"uuid": "a9622ff1-9dd3-47de-a7f0-29576811634e",
+			"title": "Upgrade Menu",
+			"description": "",
+			"category": "1c0e70bf-55c7-4b16-9e20-f7baed71a8f1",
+			"steps": []
+		},
+		{
+			"uuid": "d44f7961-e86a-40f2-a372-aedc443d063a",
+			"title": "RPG",
+			"description": "",
+			"category": "1c0e70bf-55c7-4b16-9e20-f7baed71a8f1",
+			"steps": []
+		},
+		{
+			"uuid": "b0615370-cbf5-445e-a7e4-5a9d2d8035c7",
+			"title": "Platformer",
+			"description": "",
+			"category": "1c0e70bf-55c7-4b16-9e20-f7baed71a8f1",
+			"steps": []
+		},
+		{
+			"uuid": "da039b3c-0b64-4a78-ab73-fa58e528d7eb",
+			"title": "Fighter",
+			"description": "major:\n\tadd enemy\n\tadd punch\n\tadd kick\nminor:\n\tfix the tiling on the ground (repeat on grates)\n\tadd parralax for city\n\tadd height to the fence tile\n",
+			"category": "1c0e70bf-55c7-4b16-9e20-f7baed71a8f1",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"a6d7126c-335b-43d2-8ad4-6aeb34bc6575"
+			],
+			[
+				"51b0b0aa-2f70-4ba5-8518-81ca75711465"
+			],
+			[
+				"6eed04f7-0ae8-4abc-9178-f8cc965f161a"
+			]
+		]
+	}
+}
