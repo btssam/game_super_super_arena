@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bw86k63hldtd2" path="res://Fighter/Units/PC/f_pc_template.tscn" id="3_lp654"]
 [ext_resource type="PackedScene" uid="uid://bkba77o5x24i7" path="res://Fighter/Units/Enemy/f_enemy_template.tscn" id="4_a4why"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_km8ha"]
+size = Vector2(6000, 20)
+
 [node name="F_Level_Template" type="Node2D" unique_id=1971861712]
 
 [node name="F_Background" type="Node2D" parent="." unique_id=1334595456]
@@ -22,18 +25,28 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AADz////AAADAA4AAADx////AAAAAA4AAAD6////AAAAAA4AAAD8////AAADAA4AAAADAP//AAAAAA4AAAAFAP//AAADAA4AAAAMAP//AAAAAA4AAAAOAP//AAADAA4AAADq////AAADAA4AAADo////AAAAAA4AAADh////AAADAA4AAADh//n/AAASAAAAAADh//j/AAASAAAAAADv//n/AAAAAAAAAADv//j/AAAAAAAAAAD9//n/AAAAAAcAAAD9//j/AAAAAAcAAAAAAPn/AAAIAAcAAAAAAPj/AAAIAAcAAAADAPn/AAAXAAcAAAADAPj/AAAXAAcAAAAFAPr/AAAaAAgAAAAHAPr/AAAaAAgAAAAJAPr/AAAaAAgAAAALAPr/AAAaAAgAAAANAPr/AAAaAAgAAAAPAPn/AAAdAAcAAAARAPn/AAAMAAcAAAARAPj/AAAMAAcAAAAUAPn/AAAEAAcAAAAUAPj/AAAEAAcAAAAXAPn/AAALAA4AAAAXAPj/AAALAA4AAAAVAP//AAAAAA4AAAAXAP//AAADAA4AAAA=")
 tile_set = ExtResource("2_a4why")
 
-[node name="Fighters" type="Node2D" parent="." unique_id=1730078701]
+[node name="InvisibleWall" type="StaticBody2D" parent="F_Background" unique_id=1219726154]
+position = Vector2(0, -58)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="F_Background/InvisibleWall" unique_id=705832704]
+position = Vector2(91, 0)
+shape = SubResource("RectangleShape2D_km8ha")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="F_Background/InvisibleWall" unique_id=1970119746]
+position = Vector2(91, 460)
+shape = SubResource("RectangleShape2D_km8ha")
+
+[node name="Units" type="Node2D" parent="." unique_id=1730078701]
 y_sort_enabled = true
 
-[node name="F_Player_Temp" parent="Fighters" unique_id=1190234444 instance=ExtResource("3_lp654")]
+[node name="F_Player_Temp" parent="Units" unique_id=1190234444 instance=ExtResource("3_lp654")]
 
-[node name="F_PC_Template" parent="Fighters" unique_id=1834085815 instance=ExtResource("4_a4why")]
-position = Vector2(347, 0)
+[node name="F_Enemy_Template" parent="Units" unique_id=1378419786 instance=ExtResource("4_a4why")]
+position = Vector2(278, 0)
 
-[node name="F_PC_Template3" parent="Fighters" unique_id=676364611 instance=ExtResource("4_a4why")]
-position = Vector2(395, 150)
+[node name="F_Enemy_Template2" parent="Units" unique_id=1248472867 instance=ExtResource("4_a4why")]
+position = Vector2(134, 155)
 
-[node name="F_PC_Template2" parent="Fighters" unique_id=308260429 instance=ExtResource("4_a4why")]
-position = Vector2(219.214, 72.33)
-
-[node name="Enemies" type="Node2D" parent="Fighters" unique_id=843995328]
+[node name="F_Enemy_Template3" parent="Units" unique_id=1258964671 instance=ExtResource("4_a4why")]
+position = Vector2(349, -52)
