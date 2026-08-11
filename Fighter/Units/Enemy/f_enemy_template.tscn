@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bkba77o5x24i7"]
 
 [ext_resource type="Texture2D" uid="uid://plm5jr2s52or" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/idle.png" id="2_glpyg"]
+[ext_resource type="Script" uid="uid://d0vikkjgsx7wh" path="res://Fighter/Units/Enemy/damaged.gd" id="3_i1nah"]
 [ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Assets/Streets of Fight files/Sprites/shadow.png" id="4_wvowl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i1nah"]
@@ -70,7 +71,9 @@ position = Vector2(-2.5, 20)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_glpyg")
 
-[node name="Hurtbox" type="Area2D" parent="." unique_id=103090186]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=103090186 groups=["enemy_hurtbox"]]
+collision_layer = 8
+collision_mask = 16
 
 [node name="Hurtbox_Collision" type="CollisionShape2D" parent="Hurtbox" unique_id=1302679185]
 position = Vector2(-2.5, 0)
@@ -78,7 +81,8 @@ shape = SubResource("CapsuleShape2D_i1nah")
 debug_color = Color(0.6627451, 0.5137255, 0, 0.28235295)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1232977164]
-collision_mask = 2
+collision_layer = 16
+collision_mask = 8
 
 [node name="Hitbox_Collision" type="CollisionShape2D" parent="Hitbox" unique_id=1251363313]
 unique_name_in_owner = true
@@ -90,6 +94,5 @@ debug_color = Color(0.8666667, 0, 0.8627451, 0.16470589)
 
 [node name="Scripts" type="Node" parent="." unique_id=146513462]
 
-[node name="F_PC_Move" type="Node" parent="Scripts" unique_id=1224218425]
-
-[node name="F_PC_Attack" type="Node" parent="Scripts" unique_id=2064530306]
+[node name="Damaged" type="Node" parent="Scripts" unique_id=123849957]
+script = ExtResource("3_i1nah")

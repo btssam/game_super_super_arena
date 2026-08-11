@@ -310,6 +310,8 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_km8ha")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1086976743]
+collision_layer = 8
+collision_mask = 16
 
 [node name="Hurtbox_Collision" type="CollisionShape2D" parent="Hurtbox" unique_id=348886743]
 position = Vector2(-2.5, 0)
@@ -318,7 +320,8 @@ debug_color = Color(0.6627451, 0.5137255, 0, 0.28235295)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1724231853]
 unique_name_in_owner = true
-collision_mask = 2
+collision_layer = 16
+collision_mask = 8
 
 [node name="Hitbox_Collision" type="CollisionShape2D" parent="Hitbox" unique_id=1612380377]
 position = Vector2(5.75, -9.75)
@@ -342,5 +345,3 @@ drag_bottom_margin = 0.4
 
 [node name="F_PC_Move" type="Node" parent="Scripts" unique_id=1224218425]
 script = ExtResource("5_vlub3")
-
-[node name="F_PC_Attack" type="Node" parent="Scripts" unique_id=2064530306]
