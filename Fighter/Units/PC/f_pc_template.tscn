@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bw86k63hldtd2"]
 
-[ext_resource type="Texture2D" uid="uid://cstppwg4cuv1g" path="res://Fighter/Raw Assets/Streets of Fight files/Spritesheets/Brawler Girl/idle.png" id="1_xi4qo"]
-[ext_resource type="Texture2D" uid="uid://b7dceq7c8y435" path="res://Fighter/Raw Assets/Streets of Fight files/Spritesheets/Brawler Girl/jab.png" id="3_3mot7"]
-[ext_resource type="Texture2D" uid="uid://c8qdw5vs3f76a" path="res://Fighter/Raw Assets/Streets of Fight files/Spritesheets/Brawler Girl/walk.png" id="3_j561m"]
-[ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Raw Assets/Streets of Fight files/Sprites/shadow.png" id="4_pqrto"]
+[ext_resource type="Texture2D" uid="uid://cstppwg4cuv1g" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Brawler Girl/idle.png" id="1_xi4qo"]
+[ext_resource type="Texture2D" uid="uid://b7dceq7c8y435" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Brawler Girl/jab.png" id="3_3mot7"]
+[ext_resource type="Texture2D" uid="uid://c8qdw5vs3f76a" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Brawler Girl/walk.png" id="3_j561m"]
+[ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Assets/Streets of Fight files/Sprites/shadow.png" id="4_pqrto"]
 [ext_resource type="Script" uid="uid://d3doxtrcj3lcx" path="res://Fighter/Units/PC/f_pc_move.gd" id="5_vlub3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kc208"]

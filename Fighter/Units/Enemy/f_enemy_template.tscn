@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bkba77o5x24i7"]
+
+[ext_resource type="Texture2D" uid="uid://plm5jr2s52or" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/idle.png" id="2_glpyg"]
+[ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Assets/Streets of Fight files/Sprites/shadow.png" id="4_wvowl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_km8ha"]
+radius = 11.5
+height = 50.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1nah"]
+atlas = ExtResource("2_glpyg")
+region = Rect2(31, 13, 28, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f60in"]
+atlas = ExtResource("2_glpyg")
+region = Rect2(127, 13, 28, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1axoc"]
+atlas = ExtResource("2_glpyg")
+region = Rect2(223, 13, 28, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt1yd"]
+atlas = ExtResource("2_glpyg")
+region = Rect2(319, 13, 28, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mgdr4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1nah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f60in")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1axoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt1yd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="F_PC_Template" type="CharacterBody2D" unique_id=1190234444]
+scale = Vector2(4, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=65488692]
+visible = false
+position = Vector2(-2.5, 0)
+shape = SubResource("CapsuleShape2D_km8ha")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=99178811]
+limit_top = -360
+limit_bottom = 360
+drag_horizontal_enabled = true
+drag_right_margin = 0.4
+drag_bottom_margin = 0.4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=607523443]
+texture = ExtResource("4_wvowl")
+offset = Vector2(0, 24)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=769317479]
+sprite_frames = SubResource("SpriteFrames_mgdr4")
+autoplay = "default"
+frame_progress = 0.6889641
+
+[node name="Scripts" type="Node" parent="." unique_id=146513462]
+
+[node name="F_PC_Move" type="Node" parent="Scripts" unique_id=1224218425]
+
+[node name="F_PC_Attack" type="Node" parent="Scripts" unique_id=2064530306]
