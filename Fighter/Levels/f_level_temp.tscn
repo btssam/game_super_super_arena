@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://ynft28wfgu5y"]
 
 [ext_resource type="Texture2D" uid="uid://c3xc1jgicdjmg" path="res://Fighter/Raw Assets/Streets of Fight files/Stage Layers/back.png" id="1_uxsjo"]
-[ext_resource type="PackedScene" uid="uid://bw86k63hldtd2" path="res://Fighter/Units/f_player_temp.tscn" id="2_2lpwm"]
+[ext_resource type="PackedScene" uid="uid://bw86k63hldtd2" path="res://Fighter/Units/PC/f_pc_template.tscn" id="2_2lpwm"]
 [ext_resource type="TileSet" uid="uid://dx3phfn03c1au" path="res://Fighter/Levels/stree_tile_set.tres" id="2_5jdcr"]
 
 [node name="F_Level_Temp" type="Node2D" unique_id=1971861712]
@@ -21,6 +21,4 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AADz////AAADAA4AAADx////AAAAAA4AAAD6////AAAAAA4AAAD8////AAADAA4AAAADAP//AAAAAA4AAAAFAP//AAADAA4AAAAMAP//AAAAAA4AAAAOAP//AAADAA4AAADq////AAADAA4AAADo////AAAAAA4AAADh////AAADAA4AAADh//n/AAASAAAAAADh//j/AAASAAAAAADv//n/AAAAAAAAAADv//j/AAAAAAAAAAD9//n/AAAAAAcAAAD9//j/AAAAAAcAAAAAAPn/AAAIAAcAAAAAAPj/AAAIAAcAAAADAPn/AAAXAAcAAAADAPj/AAAXAAcAAAAFAPr/AAAaAAgAAAAHAPr/AAAaAAgAAAAJAPr/AAAaAAgAAAALAPr/AAAaAAgAAAANAPr/AAAaAAgAAAAPAPn/AAAdAAcAAAARAPn/AAAMAAcAAAARAPj/AAAMAAcAAAAUAPn/AAAEAAcAAAAUAPj/AAAEAAcAAAAXAPn/AAALAA4AAAAXAPj/AAALAA4AAAAVAP//AAAAAA4AAAAXAP//AAADAA4AAAA=")
 tile_set = ExtResource("2_5jdcr")
 
-[node name="F_Player_Temp" parent="." unique_id=803531380 instance=ExtResource("2_2lpwm")]
-position = Vector2(0, 185)
-scale = Vector2(3, 3)
+[node name="F_Player_Temp" parent="." unique_id=1190234444 instance=ExtResource("2_2lpwm")]
