@@ -39,12 +39,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_km8ha"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_glpyg"]
+radius = 5.25
+height = 27.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i1nah"]
 radius = 11.5
 height = 50.0
 
-[node name="F_PC_Template" type="CharacterBody2D" unique_id=1190234444]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f60in"]
+radius = 5.7499995
+height = 20.5
+
+[node name="F_Enemy_Template" type="CharacterBody2D" unique_id=1190234444]
 scale = Vector2(4, 4)
+collision_layer = 2
+collision_mask = 5
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=607523443]
 texture = ExtResource("4_wvowl")
@@ -55,9 +65,28 @@ sprite_frames = SubResource("SpriteFrames_mgdr4")
 autoplay = "default"
 frame_progress = 0.8882268
 
-[node name="Hurtbox" type="CollisionShape2D" parent="." unique_id=65488692]
+[node name="Movement_Collision" type="CollisionShape2D" parent="." unique_id=1124852036]
+position = Vector2(-2.5, 20)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_glpyg")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=103090186]
+
+[node name="Hurtbox_Collision" type="CollisionShape2D" parent="Hurtbox" unique_id=1302679185]
 position = Vector2(-2.5, 0)
-shape = SubResource("CapsuleShape2D_km8ha")
+shape = SubResource("CapsuleShape2D_i1nah")
+debug_color = Color(0.6627451, 0.5137255, 0, 0.28235295)
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1232977164]
+collision_mask = 2
+
+[node name="Hitbox_Collision" type="CollisionShape2D" parent="Hitbox" unique_id=1251363313]
+unique_name_in_owner = true
+position = Vector2(5.75, -9.75)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_f60in")
+disabled = true
+debug_color = Color(0.8666667, 0, 0.8627451, 0.16470589)
 
 [node name="Scripts" type="Node" parent="." unique_id=146513462]
 

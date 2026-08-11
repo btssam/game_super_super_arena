@@ -77,9 +77,11 @@ A={
 
 [layer_names]
 
-2d_physics/layer_1="Player"
-2d_physics/layer_2="Enemy"
+2d_physics/layer_1="PlayerBody"
+2d_physics/layer_2="EnemyBody"
 2d_physics/layer_3="Walls"
+2d_physics/layer_4="Hurtbox"
+2d_physics/layer_5="Hitbox"
 
 [physics]
 

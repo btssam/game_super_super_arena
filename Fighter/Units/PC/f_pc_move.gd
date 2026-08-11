@@ -7,18 +7,9 @@ var movement_speed := 200.0
 @onready var character_body_node = get_owner()
 @onready var animated_sprite_2d_node = %AnimatedSprite2D
 @onready var animation_player_node = %AnimationPlayer
-@onready var hitbox_collision_node = %Hitbox_Collision
-
-var hitbox_offset_x: float
-
 @onready var hitbox_node = %Hitbox
 
 
-func _ready() -> void:
-	hitbox_offset_x = hitbox_collision_node.position.x
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta) -> void:
 	if !isAnimating():
 		handle_movement()

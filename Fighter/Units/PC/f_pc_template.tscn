@@ -144,6 +144,10 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_km8ha"]
+radius = 5.25
+height = 27.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_40gtn"]
 radius = 11.5
 height = 50.0
 
@@ -290,31 +294,38 @@ _data = {
 scale = Vector2(4, 4)
 collision_mask = 6
 
+[node name="Shadow" type="Sprite2D" parent="." unique_id=607523443]
+texture = ExtResource("4_pqrto")
+offset = Vector2(0, 24)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=455394512]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_km8ha")
 animation = &"jab"
 autoplay = "default"
 
-[node name="Hurtbox" type="CollisionShape2D" parent="." unique_id=65488692]
-position = Vector2(-2.5, 0)
+[node name="Movement_Collision" type="CollisionShape2D" parent="." unique_id=65488692]
+position = Vector2(-2.5, 20)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_km8ha")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1086976743]
+
+[node name="Hurtbox_Collision" type="CollisionShape2D" parent="Hurtbox" unique_id=348886743]
+position = Vector2(-2.5, 0)
+shape = SubResource("CapsuleShape2D_40gtn")
+debug_color = Color(0.6627451, 0.5137255, 0, 0.28235295)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1724231853]
 unique_name_in_owner = true
 collision_mask = 2
 
 [node name="Hitbox_Collision" type="CollisionShape2D" parent="Hitbox" unique_id=1612380377]
-unique_name_in_owner = true
 position = Vector2(5.75, -9.75)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_dourk")
 disabled = true
 debug_color = Color(0.8666667, 0, 0.8627451, 0.16470589)
-
-[node name="Shadow" type="Sprite2D" parent="." unique_id=607523443]
-texture = ExtResource("4_pqrto")
-offset = Vector2(0, 24)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1489716692]
 unique_name_in_owner = true
