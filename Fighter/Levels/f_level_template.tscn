@@ -22,9 +22,18 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AADz////AAADAA4AAADx////AAAAAA4AAAD6////AAAAAA4AAAD8////AAADAA4AAAADAP//AAAAAA4AAAAFAP//AAADAA4AAAAMAP//AAAAAA4AAAAOAP//AAADAA4AAADq////AAADAA4AAADo////AAAAAA4AAADh////AAADAA4AAADh//n/AAASAAAAAADh//j/AAASAAAAAADv//n/AAAAAAAAAADv//j/AAAAAAAAAAD9//n/AAAAAAcAAAD9//j/AAAAAAcAAAAAAPn/AAAIAAcAAAAAAPj/AAAIAAcAAAADAPn/AAAXAAcAAAADAPj/AAAXAAcAAAAFAPr/AAAaAAgAAAAHAPr/AAAaAAgAAAAJAPr/AAAaAAgAAAALAPr/AAAaAAgAAAANAPr/AAAaAAgAAAAPAPn/AAAdAAcAAAARAPn/AAAMAAcAAAARAPj/AAAMAAcAAAAUAPn/AAAEAAcAAAAUAPj/AAAEAAcAAAAXAPn/AAALAA4AAAAXAPj/AAALAA4AAAAVAP//AAAAAA4AAAAXAP//AAADAA4AAAA=")
 tile_set = ExtResource("2_a4why")
 
-[node name="Enemies" type="Node2D" parent="." unique_id=843995328]
+[node name="Fighters" type="Node2D" parent="." unique_id=1730078701]
+y_sort_enabled = true
 
-[node name="F_PC_Template" parent="Enemies" unique_id=1834085815 instance=ExtResource("4_a4why")]
+[node name="F_Player_Temp" parent="Fighters" unique_id=1190234444 instance=ExtResource("3_lp654")]
+
+[node name="F_PC_Template" parent="Fighters" unique_id=1834085815 instance=ExtResource("4_a4why")]
 position = Vector2(347, 0)
 
-[node name="F_Player_Temp" parent="." unique_id=1190234444 instance=ExtResource("3_lp654")]
+[node name="F_PC_Template3" parent="Fighters" unique_id=676364611 instance=ExtResource("4_a4why")]
+position = Vector2(395, 150)
+
+[node name="F_PC_Template2" parent="Fighters" unique_id=308260429 instance=ExtResource("4_a4why")]
+position = Vector2(219.214, 72.33)
+
+[node name="Enemies" type="Node2D" parent="Fighters" unique_id=843995328]

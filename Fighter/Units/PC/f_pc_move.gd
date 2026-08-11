@@ -38,6 +38,7 @@ func handle_attack():
 	if Input.is_action_just_pressed("A"):
 		animation_player_node.play("jab")
 
+
 func isAnimating():
 	if animated_sprite_2d_node.is_playing():
 #	add all uninteruptable animations here
