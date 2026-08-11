@@ -65,7 +65,7 @@ offset = Vector2(0, 24)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=769317479]
 sprite_frames = SubResource("SpriteFrames_mgdr4")
 autoplay = "default"
-frame_progress = 0.6889641
+frame_progress = 0.8882268
 
 [node name="Scripts" type="Node" parent="." unique_id=146513462]
 
