@@ -1,5 +1,7 @@
 extends Node
 
+#this script handles both movement AND attacking
+
 var horizontal_movement_axis := 0.0
 var vertical_movement_axis := 0.0
 var movement_speed := 200.0
@@ -8,6 +10,8 @@ var movement_speed := 200.0
 @onready var animated_sprite_2d_node = %AnimatedSprite2D
 @onready var animation_player_node = %AnimationPlayer
 @onready var hitbox_node = %Hitbox
+
+@export var jab_damage := 1
 
 #signal
 
@@ -57,4 +61,4 @@ func _on_area_entered(area_that_entered: Area2D) -> void:
 	if area_that_entered.is_in_group("enemy_hurtbox"):
 		var damaged := area_that_entered.get_owner().get_node_or_null("Scripts/Damaged") as EnemyDamaged
 		if damaged:
-			damaged.hit_by_jab()
+			damaged.hit_by_jab(jab_damage)

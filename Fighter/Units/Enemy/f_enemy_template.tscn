@@ -113,6 +113,12 @@ height = 50.0
 radius = 5.7499995
 height = 20.5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yt1yd"]
+bg_color = Color(0.6, 0.6, 0.6, 0.68235296)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1axoc"]
+bg_color = Color(0.83, 0.3154, 0.3154, 1)
+
 [node name="F_Enemy_Template" type="CharacterBody2D" unique_id=1190234444]
 scale = Vector2(4, 4)
 collision_layer = 2
@@ -155,6 +161,17 @@ disabled = true
 debug_color = Color(0.8666667, 0, 0.8627451, 0.16470589)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1886278500]
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1807015088]
+unique_name_in_owner = true
+offset_left = -13.5
+offset_top = -32.0
+offset_right = 13.5
+offset_bottom = -28.0
+theme_override_styles/background = SubResource("StyleBoxFlat_yt1yd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1axoc")
+value = 40.0
+show_percentage = false
 
 [node name="Scripts" type="Node" parent="." unique_id=146513462]
 
