@@ -1,43 +1,104 @@
 [gd_scene format=3 uid="uid://bkba77o5x24i7"]
 
+[ext_resource type="Texture2D" uid="uid://brrh6n5o052u2" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/hurt.png" id="2_f60in"]
 [ext_resource type="Texture2D" uid="uid://plm5jr2s52or" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/idle.png" id="2_glpyg"]
 [ext_resource type="Script" uid="uid://d0vikkjgsx7wh" path="res://Fighter/Units/Enemy/damaged.gd" id="3_i1nah"]
 [ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Assets/Streets of Fight files/Sprites/shadow.png" id="4_wvowl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i1nah"]
-atlas = ExtResource("2_glpyg")
-region = Rect2(31, 13, 28, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f60in"]
-atlas = ExtResource("2_glpyg")
-region = Rect2(127, 13, 28, 50)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_1axoc"]
-atlas = ExtResource("2_glpyg")
-region = Rect2(223, 13, 28, 50)
+atlas = ExtResource("2_f60in")
+region = Rect2(19, 13, 64, 50)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yt1yd"]
+atlas = ExtResource("2_f60in")
+region = Rect2(112, 13, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcgjn"]
+atlas = ExtResource("2_f60in")
+region = Rect2(205, 13, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvowl"]
+atlas = ExtResource("2_f60in")
+region = Rect2(298, 13, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pmig"]
 atlas = ExtResource("2_glpyg")
-region = Rect2(319, 13, 28, 50)
+region = Rect2(31, 13, 35, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k7c5"]
+atlas = ExtResource("2_glpyg")
+region = Rect2(127, 13, 35, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcpf1"]
+atlas = ExtResource("2_glpyg")
+region = Rect2(223, 13, 35, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q08w1"]
+atlas = ExtResource("2_glpyg")
+region = Rect2(319, 13, 35, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixktt"]
+atlas = ExtResource("2_f60in")
+region = Rect2(125, 13, 35, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ewco"]
+atlas = ExtResource("2_f60in")
+region = Rect2(31, 13, 35, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mgdr4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i1nah")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f60in")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_1axoc")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yt1yd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcgjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvowl")
+}],
+"loop": 1,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pmig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4k7c5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcpf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q08w1")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixktt")
+}],
+"loop": 0,
+"name": &"hurt",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ewco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixktt")
+}],
+"loop": 0,
+"name": &"hurt_2",
+"speed": 2.5
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_glpyg"]
@@ -62,9 +123,10 @@ texture = ExtResource("4_wvowl")
 offset = Vector2(0, 24)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=769317479]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_mgdr4")
+animation = &"hurt"
 autoplay = "default"
-frame_progress = 0.8882268
 
 [node name="Movement_Collision" type="CollisionShape2D" parent="." unique_id=1124852036]
 position = Vector2(-2.5, 20)
@@ -91,6 +153,8 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_f60in")
 disabled = true
 debug_color = Color(0.8666667, 0, 0.8627451, 0.16470589)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1886278500]
 
 [node name="Scripts" type="Node" parent="." unique_id=146513462]
 
