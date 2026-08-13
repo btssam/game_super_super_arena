@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Assets/Streets of Fight files/Sprites/shadow.png" id="4_wvowl"]
 [ext_resource type="Texture2D" uid="uid://cr83bvwcbccq" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/punch.png" id="4_yt1yd"]
 [ext_resource type="Script" uid="uid://bndnc6u0rodau" path="res://Fighter/Units/Enemy/ai.gd" id="7_dcgjn"]
+[ext_resource type="Script" uid="uid://cjerbyqxc3tub" path="res://Fighter/Units/Enemy/general.gd" id="8_wvowl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yt1yd"]
 atlas = ExtResource("2_f60in")
@@ -87,7 +88,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2pmig")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"dead",
 "speed": 5.0
 }, {
@@ -126,7 +127,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j44a7")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"jab",
 "speed": 5.0
 }, {
@@ -455,6 +456,17 @@ tracks/11/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Scripts/General")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yt1yd"]
 _data = {
@@ -528,7 +540,12 @@ show_percentage = false
 [node name="Scripts" type="Node" parent="." unique_id=146513462]
 
 [node name="Damaged" type="Node" parent="Scripts" unique_id=123849957]
+unique_name_in_owner = true
 script = ExtResource("3_i1nah")
 
 [node name="AI" type="Node" parent="Scripts" unique_id=1025266778]
+unique_name_in_owner = true
 script = ExtResource("7_dcgjn")
+
+[node name="General" type="Node" parent="Scripts" unique_id=1299585973]
+script = ExtResource("8_wvowl")

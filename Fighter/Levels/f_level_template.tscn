@@ -44,3 +44,6 @@ y_sort_enabled = true
 
 [node name="F_Enemy_Template" parent="Units" unique_id=731533891 instance=ExtResource("4_a4why")]
 position = Vector2(217, -21)
+
+[node name="F_Enemy_Template2" parent="Units" unique_id=790613556 instance=ExtResource("4_a4why")]
+position = Vector2(-401, 115)

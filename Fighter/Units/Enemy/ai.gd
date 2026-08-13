@@ -1,6 +1,8 @@
 extends Node
 class_name EnemyAI
 
+#handles ai like, attacking and moving
+
 @export var target: Node2D
 @export var move_speed:= 120.0
 @export var attack_range:= 180.0
@@ -21,16 +23,18 @@ func _ready() -> void:
 	if target == null:
 		target = get_tree().get_first_node_in_group("player") as Node2D
 
-func _physics_process(delta: float) -> void:
+func handle_ai(delta: float) -> void:
 	if target == null:
 		idle()
 		return
-	attack_cooldown_remaining = maxf(attack_cooldown_remaining - delta, 0.0) ##
+	attack_cooldown_remaining = maxf(attack_cooldown_remaining - delta, 0.0)
 	distance_to_target = body.global_position.distance_to(target.global_position)
+#	not a very robust check - will start hitting air if i am above or below enemy
 	if distance_to_target > attack_range:
 		move_toward_target()
 	else:
 		stop_and_attack()
+	
 
 func move_toward_target() -> void:
 	direction_to_target = body.global_position.direction_to(target.global_position)
@@ -46,7 +50,8 @@ func move_toward_target() -> void:
 func stop_and_attack():
 	body.velocity = Vector2.ZERO
 	body.move_and_slide()
-	if animation_player.is_playing(): ##
+#	vvv this needs another pass when i add more animations to the player. with the only animation being the dead animation, it makes sense to return and not run stop_attack() - maybe not true for future anims
+	if animation_player.is_playing():
 		return
 	if attack_cooldown_remaining > 0.0:
 		animated_sprite.play("default")
@@ -64,3 +69,7 @@ func idle():
 	body.velocity = Vector2.ZERO
 	body.move_and_slide()
 	animated_sprite.play("default")
+
+func stop_motion() -> void:
+	body.velocity = Vector2.ZERO
+	body.move_and_slide()
