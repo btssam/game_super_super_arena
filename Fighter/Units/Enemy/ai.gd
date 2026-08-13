@@ -4,7 +4,7 @@ class_name EnemyAI
 @export var target: Node2D
 @export var move_speed:= 120.0
 @export var attack_range:= 180.0
-@export var target_cooldown:= 0.8
+@export var attack_cooldown:= 0.8
 
 @onready var body := get_owner() as CharacterBody2D
 @onready var animated_sprite := %AnimatedSprite2D
@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	if target == null:
 		idle()
 		return
-	attack_cooldown_remaining = maxf(attack_cooldown_remaining - delta, 0.0)
+	attack_cooldown_remaining = maxf(attack_cooldown_remaining - delta, 0.0) ##
 	distance_to_target = body.global_position.distance_to(target.global_position)
 	if distance_to_target > attack_range:
 		move_toward_target()
@@ -46,7 +46,19 @@ func move_toward_target() -> void:
 func stop_and_attack():
 	body.velocity = Vector2.ZERO
 	body.move_and_slide()
+	if animation_player.is_playing(): ##
+		return
+	if attack_cooldown_remaining > 0.0:
+		animated_sprite.play("default")
+		return
+	attack_cooldown_remaining = attack_cooldown
+	attack()
 
+func attack() -> void:
+	#needs replaced with animationplayer to enable hitbox
+	animated_sprite.stop()
+	animated_sprite.play("jab")
+	
 
 func idle():
 	body.velocity = Vector2.ZERO
