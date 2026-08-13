@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://d0vikkjgsx7wh" path="res://Fighter/Units/Enemy/damaged.gd" id="3_i1nah"]
 [ext_resource type="Texture2D" uid="uid://b2h5utuih8pw0" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/walk.png" id="4_1axoc"]
 [ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Assets/Streets of Fight files/Sprites/shadow.png" id="4_wvowl"]
+[ext_resource type="Texture2D" uid="uid://cr83bvwcbccq" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/punch.png" id="4_yt1yd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yt1yd"]
 atlas = ExtResource("2_f60in")
@@ -41,6 +42,18 @@ region = Rect2(288, 0, 96, 63)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixktt"]
 atlas = ExtResource("2_f60in")
 region = Rect2(96, 0, 96, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8tvl"]
+atlas = ExtResource("4_yt1yd")
+region = Rect2(0, 0, 96, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wx7c"]
+atlas = ExtResource("4_yt1yd")
+region = Rect2(96, 0, 96, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j44a7"]
+atlas = ExtResource("4_yt1yd")
+region = Rect2(192, 0, 96, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dhij3"]
 atlas = ExtResource("4_1axoc")
@@ -101,6 +114,20 @@ animations = [{
 "loop": 0,
 "name": &"hurt",
 "speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8tvl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wx7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j44a7")
+}],
+"loop": 1,
+"name": &"jab",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

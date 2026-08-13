@@ -63,7 +63,7 @@
 		{
 			"uuid": "da039b3c-0b64-4a78-ab73-fa58e528d7eb",
 			"title": "Fighter",
-			"description": "major:\n\tadd enemy\n\tadd jab\n\tadd enemy attacks AI\n\tadd interactions between damage\n\tadd win/lose con\n\tadd collision to walls\nminor:\n\tfix the tiling on the ground (repeat on grates)\n\tadd parralax for city\n\tadd height to the fence tile\n\tadd kick\n\tadd punch to jab, making it to a two hit combo, using and input buffer (perhaps)\n\tadd system to do rounds of enemies\n\t\t-fight a set of enemies, they walk onto the screen from left/right in a wave\n\t\t-when a wave is done, a \"GO ->\" text pops up, when moving to next stage, another wave appears.\n",
+			"description": "major:\n\tadd enemy attacks AI\n\tadd interactions between damage\n\tadd win/lose con\nminor:\n\tfix the tiling on the ground (repeat on grates)\n\tadd parralax for city\n\tadd height to the fence tile\n\tadd kick\n\tadd punch to jab, making it to a two hit combo, using and input buffer (perhaps)\n\tadd system to do rounds of enemies\n\t\t-fight a set of enemies, they walk onto the screen from left/right in a wave\n\t\t-when a wave is done, a \"GO ->\" text pops up, when moving to next stage, another wave appears.\n",
 			"category": "1c0e70bf-55c7-4b16-9e20-f7baed71a8f1",
 			"steps": []
 		},
