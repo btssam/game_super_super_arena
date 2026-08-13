@@ -293,7 +293,7 @@ _data = {
 &"jab": SubResource("Animation_xi7fb")
 }
 
-[node name="F_PC_Template" type="CharacterBody2D" unique_id=1190234444]
+[node name="F_PC_Template" type="CharacterBody2D" unique_id=1190234444 groups=["player"]]
 scale = Vector2(4, 4)
 collision_mask = 6
 

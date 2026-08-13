@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b2h5utuih8pw0" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/walk.png" id="4_1axoc"]
 [ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Assets/Streets of Fight files/Sprites/shadow.png" id="4_wvowl"]
 [ext_resource type="Texture2D" uid="uid://cr83bvwcbccq" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/punch.png" id="4_yt1yd"]
+[ext_resource type="Script" uid="uid://bndnc6u0rodau" path="res://Fighter/Units/Enemy/ai.gd" id="7_dcgjn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yt1yd"]
 atlas = ExtResource("2_f60in")
@@ -467,7 +468,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0.68235296)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1axoc"]
 bg_color = Color(0.83, 0.3154, 0.3154, 1)
 
-[node name="F_Enemy_Template" type="CharacterBody2D" unique_id=1190234444]
+[node name="F_Enemy_Template" type="CharacterBody2D" unique_id=1190234444 groups=["enemies"]]
 scale = Vector2(4, 4)
 collision_layer = 2
 collision_mask = 5
@@ -497,6 +498,7 @@ shape = SubResource("CapsuleShape2D_i1nah")
 debug_color = Color(0.6627451, 0.5137255, 0, 0.28235295)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1232977164]
+unique_name_in_owner = true
 collision_layer = 16
 collision_mask = 8
 
@@ -527,3 +529,6 @@ show_percentage = false
 
 [node name="Damaged" type="Node" parent="Scripts" unique_id=123849957]
 script = ExtResource("3_i1nah")
+
+[node name="AI" type="Node" parent="Scripts" unique_id=1025266778]
+script = ExtResource("7_dcgjn")

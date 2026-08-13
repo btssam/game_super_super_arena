@@ -28,6 +28,8 @@ If it would help answer a Godot-related question, the assistant is encouraged to
 
 The user wants to become a Godot expert and is currently proficient. When answering Godot questions, explain the robust pattern and the reason behind it, call out tradeoffs where useful, and prefer maintainable project structure over quick hacks.
 
+When giving Godot architecture or implementation guidance, ground the answer in this project's actual scene and script layout when available. Name the specific scene, node, or script where code would live, and distinguish clearly between code that belongs on unit script nodes, level/controller scripts, spawners, resources, or autoloads.
+
 ## Git Policy
 
 Do not interact with git in this project unless the user explicitly asks for a git operation in the current conversation.
