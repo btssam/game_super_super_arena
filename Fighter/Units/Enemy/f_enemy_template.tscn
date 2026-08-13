@@ -3,50 +3,64 @@
 [ext_resource type="Texture2D" uid="uid://brrh6n5o052u2" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/hurt.png" id="2_f60in"]
 [ext_resource type="Texture2D" uid="uid://plm5jr2s52or" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/idle.png" id="2_glpyg"]
 [ext_resource type="Script" uid="uid://d0vikkjgsx7wh" path="res://Fighter/Units/Enemy/damaged.gd" id="3_i1nah"]
+[ext_resource type="Texture2D" uid="uid://b2h5utuih8pw0" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Enemy Punk/walk.png" id="4_1axoc"]
 [ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Assets/Streets of Fight files/Sprites/shadow.png" id="4_wvowl"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1axoc"]
-atlas = ExtResource("2_f60in")
-region = Rect2(19, 13, 64, 50)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yt1yd"]
 atlas = ExtResource("2_f60in")
-region = Rect2(112, 13, 64, 50)
+region = Rect2(0, 0, 96, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dcgjn"]
 atlas = ExtResource("2_f60in")
-region = Rect2(205, 13, 64, 50)
+region = Rect2(96, 0, 96, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wvowl"]
 atlas = ExtResource("2_f60in")
-region = Rect2(298, 13, 64, 50)
+region = Rect2(192, 0, 96, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2pmig"]
-atlas = ExtResource("2_glpyg")
-region = Rect2(31, 13, 35, 50)
+atlas = ExtResource("2_f60in")
+region = Rect2(288, 0, 96, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4k7c5"]
 atlas = ExtResource("2_glpyg")
-region = Rect2(127, 13, 35, 50)
+region = Rect2(0, 0, 96, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xcpf1"]
 atlas = ExtResource("2_glpyg")
-region = Rect2(223, 13, 35, 50)
+region = Rect2(96, 0, 96, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q08w1"]
 atlas = ExtResource("2_glpyg")
-region = Rect2(319, 13, 35, 50)
+region = Rect2(192, 0, 96, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ewco"]
+atlas = ExtResource("2_glpyg")
+region = Rect2(288, 0, 96, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixktt"]
 atlas = ExtResource("2_f60in")
-region = Rect2(125, 13, 35, 50)
+region = Rect2(96, 0, 96, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhij3"]
+atlas = ExtResource("4_1axoc")
+region = Rect2(0, 0, 96, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3cwk"]
+atlas = ExtResource("4_1axoc")
+region = Rect2(96, 0, 96, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rg5c1"]
+atlas = ExtResource("4_1axoc")
+region = Rect2(192, 0, 96, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqtk7"]
+atlas = ExtResource("4_1axoc")
+region = Rect2(288, 0, 96, 63)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mgdr4"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1axoc")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yt1yd")
 }, {
@@ -55,15 +69,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wvowl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pmig")
 }],
 "loop": 1,
 "name": &"dead",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2pmig")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4k7c5")
 }, {
@@ -72,6 +86,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q08w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ewco")
 }],
 "loop": 1,
 "name": &"default",
@@ -84,6 +101,23 @@ animations = [{
 "loop": 0,
 "name": &"hurt",
 "speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhij3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3cwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rg5c1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqtk7")
+}],
+"loop": 1,
+"name": &"move",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_glpyg"]
@@ -232,6 +266,18 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(-13.5, -32)]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Movement_Collision:disabled")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_1axoc"]
 resource_name = "dead"
@@ -369,6 +415,18 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(-13.5, -32), Vector2(2.5, -32)]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Movement_Collision:disabled")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yt1yd"]
 _data = {
@@ -395,6 +453,7 @@ offset = Vector2(0, 24)
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_mgdr4")
 autoplay = "default"
+offset = Vector2(0, -6)
 
 [node name="Movement_Collision" type="CollisionShape2D" parent="." unique_id=1124852036]
 position = Vector2(-2.5, 20)

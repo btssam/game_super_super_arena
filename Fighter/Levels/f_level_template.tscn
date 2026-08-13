@@ -42,11 +42,5 @@ y_sort_enabled = true
 
 [node name="F_Player_Temp" parent="Units" unique_id=1190234444 instance=ExtResource("3_lp654")]
 
-[node name="F_Enemy_Template" parent="Units" unique_id=1378419786 instance=ExtResource("4_a4why")]
-position = Vector2(278, 0)
-
-[node name="F_Enemy_Template2" parent="Units" unique_id=1248472867 instance=ExtResource("4_a4why")]
-position = Vector2(134, 155)
-
-[node name="F_Enemy_Template3" parent="Units" unique_id=1258964671 instance=ExtResource("4_a4why")]
-position = Vector2(349, -52)
+[node name="F_Enemy_Template" parent="Units" unique_id=731533891 instance=ExtResource("4_a4why")]
+position = Vector2(217, -21)

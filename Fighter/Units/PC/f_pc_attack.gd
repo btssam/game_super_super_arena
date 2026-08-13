@@ -15,6 +15,7 @@ func handle_attack() -> void:
 		animation_player_node.play("jab")
 
 
+#this likely should be made more generic
 func _on_area_entered(area_that_entered: Area2D) -> void:
 	if area_that_entered.is_in_group("enemy_hurtbox"):
 		var damaged := area_that_entered.get_owner().get_node_or_null("Scripts/Damaged") as EnemyDamaged
