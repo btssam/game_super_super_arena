@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://c8qdw5vs3f76a" path="res://Fighter/Assets/Streets of Fight files/Spritesheets/Brawler Girl/walk.png" id="3_j561m"]
 [ext_resource type="Texture2D" uid="uid://c03y81dl20vau" path="res://Fighter/Assets/Streets of Fight files/Sprites/shadow.png" id="4_pqrto"]
 [ext_resource type="Script" uid="uid://d3doxtrcj3lcx" path="res://Fighter/Units/PC/f_pc_move.gd" id="5_vlub3"]
+[ext_resource type="Script" uid="uid://bi2kcbaf0btu7" path="res://Fighter/Units/PC/f_pc_attack.gd" id="6_knoe1"]
+[ext_resource type="Script" uid="uid://bsrvhtvwbrcvu" path="res://Fighter/Units/PC/general.gd" id="6_xi7fb"]
+[ext_resource type="Script" uid="uid://bdr6hkm8jmq7r" path="res://Fighter/Units/PC/stats.gd" id="8_63053"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kc208"]
 atlas = ExtResource("1_xi4qo")
@@ -344,4 +347,16 @@ drag_bottom_margin = 0.4
 [node name="Scripts" type="Node" parent="." unique_id=146513462]
 
 [node name="F_PC_Move" type="Node" parent="Scripts" unique_id=1224218425]
+unique_name_in_owner = true
 script = ExtResource("5_vlub3")
+
+[node name="F_PC_Attack" type="Node" parent="Scripts" unique_id=11192845]
+unique_name_in_owner = true
+script = ExtResource("6_knoe1")
+
+[node name="General" type="Node" parent="Scripts" unique_id=1524787610]
+script = ExtResource("6_xi7fb")
+
+[node name="Stats" type="Node" parent="Scripts" unique_id=192916499]
+unique_name_in_owner = true
+script = ExtResource("8_63053")
