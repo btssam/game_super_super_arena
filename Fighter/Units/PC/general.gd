@@ -9,7 +9,7 @@ extends Node
 @onready var attack_script = %Attack
 
 
-func _process(_delta) -> void:
+func _physics_process(_delta) -> void:
 	if !isAnimating():
 		move_script.handle_movement()
 		attack_script.handle_attack()

@@ -41,13 +41,11 @@ func move_toward_target() -> void:
 	body.velocity = direction_to_target * move_speed
 	body.move_and_slide()
 	animated_sprite.play("move")
-	animated_sprite.flip_h = direction_to_target.x > 0.0
-	if animated_sprite.flip_h:
-		hitbox.scale.x = -1.0
-	else:
-		hitbox.scale.x = 1.0
+	flip_sprite(direction_to_target)
 
 func stop_and_attack():
+	direction_to_target = body.global_position.direction_to(target.global_position)
+	flip_sprite(direction_to_target)
 	body.velocity = Vector2.ZERO
 	body.move_and_slide()
 #	vvv this needs another pass when i add more animations to the player. with the only animation being the dead animation, it makes sense to return and not run stop_attack() - maybe not true for future anims
@@ -58,6 +56,14 @@ func stop_and_attack():
 		return
 	attack_cooldown_remaining = attack_cooldown
 	attack()
+
+func flip_sprite(direction_to_target):
+	animated_sprite.flip_h = direction_to_target.x > 0.0
+	if animated_sprite.flip_h:
+		hitbox.scale.x = 1.0
+	else:
+		hitbox.scale.x = -1.0
+	
 
 func attack() -> void:
 	#needs replaced with animationplayer to enable hitbox

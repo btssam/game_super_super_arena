@@ -9,7 +9,7 @@ extends Node
 
 @export var isBusy:= false
 
-func _process(delta):
+func _physics_process(delta):
 	if damaged_script.is_dead:
 		ai_script.stop_motion()
 		return
