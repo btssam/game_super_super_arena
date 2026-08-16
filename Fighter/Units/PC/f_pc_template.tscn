@@ -219,7 +219,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(5.75, -9.75)]
+"values": [Vector2(30.25, -9.75)]
 }
 
 [sub_resource type="Animation" id="Animation_xi7fb"]
@@ -293,6 +293,12 @@ _data = {
 &"jab": SubResource("Animation_xi7fb")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63053"]
+bg_color = Color(0.6, 0.6, 0.6, 0.68235296)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msa5q"]
+bg_color = Color(0.83, 0.3154, 0.3154, 1)
+
 [node name="F_PC_Template" type="CharacterBody2D" unique_id=1190234444 groups=["player"]]
 scale = Vector2(4, 4)
 collision_mask = 6
@@ -329,7 +335,7 @@ collision_layer = 16
 collision_mask = 8
 
 [node name="Hitbox_Collision" type="CollisionShape2D" parent="Hitbox" unique_id=1612380377]
-position = Vector2(5.75, -9.75)
+position = Vector2(30.25, -9.75)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_dourk")
 disabled = true
@@ -338,6 +344,17 @@ debug_color = Color(0.8666667, 0, 0.8627451, 0.16470589)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1489716692]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_knoe1")
+
+[node name="HPBar" type="ProgressBar" parent="." unique_id=315442230]
+offset_left = -13.5
+offset_top = -32.0
+offset_right = 13.5
+offset_bottom = -28.0
+pivot_offset = Vector2(-21.25, 10.75)
+theme_override_styles/background = SubResource("StyleBoxFlat_63053")
+theme_override_styles/fill = SubResource("StyleBoxFlat_msa5q")
+value = 40.0
+show_percentage = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=99178811]
 limit_top = -360

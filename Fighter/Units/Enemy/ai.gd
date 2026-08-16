@@ -68,8 +68,8 @@ func flip_sprite(direction_to_target):
 
 func attack() -> void:
 	#needs replaced with animationplayer to enable hitbox
-	animated_sprite.stop()
-	animated_sprite.play("jab")
+	#animated_sprite.stop()
+	animation_player.play("jab")
 	
 
 func idle():

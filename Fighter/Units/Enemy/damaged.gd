@@ -72,4 +72,4 @@ func _on_player_animation_finished(anim_name: StringName):
 		pass
 		
 	else:
-		print(anim_name + " animationplayer animation has finished.")
+		pass
