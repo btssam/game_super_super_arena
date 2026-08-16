@@ -30,6 +30,8 @@ The user wants to become a Godot expert and is currently proficient. When answer
 
 When giving Godot architecture or implementation guidance, ground the answer in this project's actual scene and script layout when available. Name the specific scene, node, or script where code would live, and distinguish clearly between code that belongs on unit script nodes, level/controller scripts, spawners, resources, or autoloads.
 
+When introducing Godot methods, APIs, or patterns the user may not have seen before, explain the underlying concepts clearly enough for learning, not just copy-paste usage. Define unfamiliar types, constants, return values, sentinel values, and why checks are included, especially when code contains magic-looking values or engine-specific concepts. Keep answers practical and avoid over-engineering; prefer the smallest maintainable solution before suggesting more advanced architecture.
+
 ## Git Policy
 
 Do not interact with git in this project unless the user explicitly asks for a git operation in the current conversation.

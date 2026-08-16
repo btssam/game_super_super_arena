@@ -63,7 +63,8 @@ func flip_sprite(direction_to_target):
 		hitbox.scale.x = 1.0
 	else:
 		hitbox.scale.x = -1.0
-	
+	#animation_player.set_keyframe("dead").position
+
 
 func attack() -> void:
 	#needs replaced with animationplayer to enable hitbox
