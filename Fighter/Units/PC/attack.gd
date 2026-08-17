@@ -2,17 +2,17 @@ extends Node
 
 #this script handles movement
 
-@onready var animation_player_node = %AnimationPlayer
-@onready var hitbox_node = %Hitbox
+@onready var animation_player = %AnimationPlayer
+@onready var hitbox = %Hitbox
 
 @onready var stats = %Stats
 
 func _ready():
-	hitbox_node.area_entered.connect(_on_area_entered)
+	hitbox.area_entered.connect(_on_area_entered)
 	
 func handle_attack() -> void:
 	if Input.is_action_just_pressed("A"):
-		animation_player_node.play("jab")
+		animation_player.play("jab")
 
 
 #this likely should be made more generic

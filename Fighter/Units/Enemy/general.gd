@@ -21,7 +21,7 @@ func _physics_process(delta):
 	
 	ai_script.handle_ai(delta)
 
-#dont ruin ai becaue an animation/action is happening
+#dont run ai becaue an animation/action is happening
 func is_busy() -> bool:
 	if animation_player.is_playing():
 		return true

@@ -2,10 +2,9 @@ extends Node
 
 #this script handles movement
 
-
-@onready var character_body_node = get_owner()
-@onready var animated_sprite_2d_node = %AnimatedSprite2D
-@onready var hitbox_node = %Hitbox
+@onready var body = get_owner()
+@onready var animated_sprite = %AnimatedSprite2D
+@onready var hitbox = %Hitbox
 
 
 var horizontal_movement_axis := 0.0
@@ -17,17 +16,17 @@ var vertical_movement_axis := 0.0
 func handle_movement() -> void:
 	horizontal_movement_axis = Input.get_axis("Left", "Right")
 	vertical_movement_axis = Input.get_axis("Up", "Down")
-	character_body_node.velocity.x = horizontal_movement_axis * stats.movement_speed
-	character_body_node.velocity.y = vertical_movement_axis * stats.movement_speed
-	if character_body_node.velocity.x != 0.0:
-		animated_sprite_2d_node.play("move")
-		animated_sprite_2d_node.flip_h = horizontal_movement_axis < 0
-		if animated_sprite_2d_node.flip_h:
-			hitbox_node.scale.x = -1.0
+	body.velocity.x = horizontal_movement_axis * stats.movement_speed
+	body.velocity.y = vertical_movement_axis * stats.movement_speed
+	if body.velocity.x != 0.0:
+		animated_sprite.play("move")
+		animated_sprite.flip_h = horizontal_movement_axis < 0
+		if animated_sprite.flip_h:
+			hitbox.scale.x = -1.0
 		else:
-			hitbox_node.scale.x = 1.0
-	elif character_body_node.velocity.y != 0.0:
-		animated_sprite_2d_node.play("move")
+			hitbox.scale.x = 1.0
+	elif body.velocity.y != 0.0:
+		animated_sprite.play("move")
 	else:
-		animated_sprite_2d_node.play("default")
-	character_body_node.move_and_slide()
+		animated_sprite.play("default")
+	body.move_and_slide()

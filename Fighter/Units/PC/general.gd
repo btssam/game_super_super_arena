@@ -2,8 +2,8 @@ extends Node
 
 #general controller
 
-@onready var animation_player_node = %AnimationPlayer
-@onready var animated_sprite_2d_node = %AnimatedSprite2D
+@onready var animation_player = %AnimationPlayer
+@onready var animated_sprite = %AnimatedSprite2D
 
 @onready var move_script = %Move
 @onready var attack_script = %Attack
@@ -16,9 +16,9 @@ func _physics_process(_delta) -> void:
 
 
 func isAnimating() -> bool:
-	if animated_sprite_2d_node.is_playing() or animation_player_node.is_playing():
+	if animated_sprite.is_playing() or animation_player.is_playing():
 #	add all uninteruptable animations here
-		if animation_player_node.current_animation == "jab": 
+		if animation_player.current_animation == "jab": 
 			return true
 		else:
 			return false

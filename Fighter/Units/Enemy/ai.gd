@@ -20,8 +20,16 @@ var distance_to_target: float
 var direction_to_target: Vector2
 
 func _ready() -> void:
+	hitbox.area_entered.connect(_on_area_entered)
 	if target == null:
 		target = get_tree().get_first_node_in_group("player") as Node2D
+
+func _on_area_entered(area_that_entered: Area2D) -> void:
+	print('sup')
+	print(area_that_entered.get_groups())
+	if area_that_entered.is_in_group("player_hurtbox"):
+		print('Hit!')
+
 
 func handle_ai(delta: float) -> void:
 	if target == null:
@@ -67,8 +75,6 @@ func flip_sprite(direction_to_target):
 
 
 func attack() -> void:
-	#needs replaced with animationplayer to enable hitbox
-	#animated_sprite.stop()
 	animation_player.play("jab")
 	
 

@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bi2kcbaf0btu7" path="res://Fighter/Units/PC/attack.gd" id="6_knoe1"]
 [ext_resource type="Script" uid="uid://bsrvhtvwbrcvu" path="res://Fighter/Units/PC/general.gd" id="6_xi7fb"]
 [ext_resource type="Script" uid="uid://bdr6hkm8jmq7r" path="res://Fighter/Units/PC/stats.gd" id="8_63053"]
+[ext_resource type="Script" uid="uid://jikrxixih2o7" path="res://Fighter/Units/PC/damaged.gd" id="9_msa5q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_63053"]
 atlas = ExtResource("1_xi4qo")
@@ -320,7 +321,7 @@ position = Vector2(-2.5, 20)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_km8ha")
 
-[node name="Hurtbox" type="Area2D" parent="." unique_id=1086976743]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1086976743 groups=["player_hurtbox"]]
 collision_layer = 8
 collision_mask = 16
 
@@ -346,6 +347,7 @@ unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_knoe1")
 
 [node name="HPBar" type="ProgressBar" parent="." unique_id=315442230]
+unique_name_in_owner = true
 offset_left = -13.5
 offset_top = -32.0
 offset_right = 13.5
@@ -379,3 +381,6 @@ script = ExtResource("6_xi7fb")
 [node name="Stats" type="Node" parent="Scripts" unique_id=192916499]
 unique_name_in_owner = true
 script = ExtResource("8_63053")
+
+[node name="Damaged" type="Node" parent="Scripts" unique_id=774609816]
+script = ExtResource("9_msa5q")
