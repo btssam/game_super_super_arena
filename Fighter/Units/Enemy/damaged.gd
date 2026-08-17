@@ -38,15 +38,17 @@ func hit_by_jab(damage):
 	hp -= damage
 	hp_bar.value = hp
 	if hp > 0:
-		animated_sprite.stop()
-		#animation_player.stop()
-		animation_player.call_deferred("stop")
-		animated_sprite.play("hurt")
+		call_deferred("play_hurt_after_interrupt")
 	else:
 		is_dead = true
-		animated_sprite.stop()
 		face_dead_animation()
+		animated_sprite.stop()
 		animation_player.play("dead")
+
+func play_hurt_after_interrupt():
+	animation_player.stop()
+	animated_sprite.stop()
+	animated_sprite.play("hurt")
 
 func face_dead_animation():
 	var direction := 1.0
