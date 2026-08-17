@@ -14,3 +14,17 @@ class_name PlayerDamaged
 func _ready():
 	hp_bar.max_value = max_hp
 	hp_bar.value = hp
+
+func hit_by_jab(damage):
+	if is_dead:
+		return
+	hp -= damage
+	hp_bar.value = hp
+	if hp > 0:
+		pass
+		#animated_sprite.play("hurt")
+	else:
+		is_dead = true
+		#animated_sprite.stop()
+		#face_dead_animation()
+		#animation_player.play("dead")

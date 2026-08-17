@@ -7,6 +7,7 @@ class_name EnemyAI
 @export var move_speed:= 120.0
 @export var attack_range:= 180.0
 @export var attack_cooldown:= 0.8
+@export var jab_damage := 1
 
 @onready var body := get_owner() as CharacterBody2D
 @onready var animated_sprite := %AnimatedSprite2D
@@ -25,11 +26,10 @@ func _ready() -> void:
 		target = get_tree().get_first_node_in_group("player") as Node2D
 
 func _on_area_entered(area_that_entered: Area2D) -> void:
-	print('sup')
-	print(area_that_entered.get_groups())
 	if area_that_entered.is_in_group("player_hurtbox"):
-		print('Hit!')
-
+		var damaged := area_that_entered.get_owner().get_node_or_null("Scripts/Damaged") as PlayerDamaged
+		if damaged:
+			damaged.hit_by_jab(jab_damage)
 
 func handle_ai(delta: float) -> void:
 	if target == null:

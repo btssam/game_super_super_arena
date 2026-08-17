@@ -20,12 +20,27 @@ func _ready():
 	hp_bar.value = hp
 	
 
+func _on_sprite_animation_finished():
+	if animated_sprite.animation == 'hurt':
+		animated_sprite.play("default")
+
+func _on_player_animation_finished(anim_name: StringName):
+	if anim_name == "dead":
+		pass
+		
+	else:
+		pass
+
+
 func hit_by_jab(damage):
 	if is_dead:
 		return
 	hp -= damage
 	hp_bar.value = hp
 	if hp > 0:
+		animated_sprite.stop()
+		#animation_player.stop()
+		animation_player.call_deferred("stop")
 		animated_sprite.play("hurt")
 	else:
 		is_dead = true
@@ -62,14 +77,3 @@ func face_dead_animation():
 		var distance_from_base := absf(value.x - hp_bar_base_x)
 		value.x = hp_bar_base_x + distance_from_base * direction
 		anim.track_set_key_value(hp_bar_track, i, value)
-
-func _on_sprite_animation_finished():
-	if animated_sprite.animation == 'hurt':
-		animated_sprite.play("default")
-
-func _on_player_animation_finished(anim_name: StringName):
-	if anim_name == "dead":
-		pass
-		
-	else:
-		pass
