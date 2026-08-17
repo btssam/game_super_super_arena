@@ -3,16 +3,18 @@ class_name PlayerDamaged
 
 #handles incoming damage from enemies and dying
 
-@export var max_hp := 5
-@export var hp := 5
+@export var hp := 1
 @export var is_dead := false
 
 @onready var animated_sprite := %AnimatedSprite2D
 @onready var animation_player := %AnimationPlayer
 @onready var hp_bar = %HPBar
+@onready var stats = %Stats
+
 
 func _ready():
-	hp_bar.max_value = max_hp
+	hp_bar.max_value = stats.max_hp
+	hp = stats.max_hp
 	hp_bar.value = hp
 
 func hit_by_jab(damage):
@@ -21,8 +23,10 @@ func hit_by_jab(damage):
 	hp -= damage
 	hp_bar.value = hp
 	if hp > 0:
-		pass
-		#animated_sprite.play("hurt")
+		animation_player.stop()
+		animated_sprite.stop()
+		animated_sprite.play("hurt")
+		print('hit confirmed')
 	else:
 		is_dead = true
 		#animated_sprite.stop()
