@@ -11,7 +11,7 @@ extends Node
 
 func _physics_process(delta):
 	if damaged_script.is_dead:
-		ai_script.stop_motion()
+		#ai_script.stop_motion()
 		return
 		
 
